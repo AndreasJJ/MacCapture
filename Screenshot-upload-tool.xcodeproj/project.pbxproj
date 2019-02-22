@@ -84,21 +84,15 @@
 		A0065431221AD45300F9E2F7 /* Screenshot-upload-tool */ = {
 			isa = PBXGroup;
 			children = (
-				A0FAAE90221F4E6E00C36B27 /* ServerConfig+CoreDataClass.swift */,
-				A0FAAE91221F4E6E00C36B27 /* ServerConfig+CoreDataProperties.swift */,
-				A0FAAE92221F4E6E00C36B27 /* AppConfig+CoreDataClass.swift */,
-				A0FAAE93221F4E6E00C36B27 /* AppConfig+CoreDataProperties.swift */,
+				A0FAAE9F222030C000C36B27 /* ControllersAndDelegates */,
+				A0FAAE9E2220303F00C36B27 /* storage */,
 				A0065447221AF14600F9E2F7 /* Functionality */,
-				A0065432221AD45300F9E2F7 /* AppDelegate.swift */,
-				A0065434221AD45300F9E2F7 /* Assets.xcassets */,
 				A0065436221AD45300F9E2F7 /* MainMenu.xib */,
-				A0065439221AD45300F9E2F7 /* Info.plist */,
-				A006543A221AD45300F9E2F7 /* Screenshot_upload_tool.entitlements */,
-				A0065440221ADADF00F9E2F7 /* StatusMenuController.swift */,
-				A0FAAE73221F26EF00C36B27 /* PersistenceService.swift */,
-				A0FAAE7D221F4C5800C36B27 /* Screenshot-upload-tool.xcdatamodeld */,
 				A0FAAE9A221F57A500C36B27 /* PreferencesWindow.swift */,
 				A0FAAE9B221F57A500C36B27 /* PreferencesWindow.xib */,
+				A006543A221AD45300F9E2F7 /* Screenshot_upload_tool.entitlements */,
+				A0065439221AD45300F9E2F7 /* Info.plist */,
+				A0065434221AD45300F9E2F7 /* Assets.xcassets */,
 			);
 			path = "Screenshot-upload-tool";
 			sourceTree = "<group>";
@@ -121,6 +115,28 @@
 				A0636099221CAC96002DA7C3 /* Screencapture.swift */,
 			);
 			path = Functionality;
+			sourceTree = "<group>";
+		};
+		A0FAAE9E2220303F00C36B27 /* storage */ = {
+			isa = PBXGroup;
+			children = (
+				A0FAAE7D221F4C5800C36B27 /* Screenshot-upload-tool.xcdatamodeld */,
+				A0FAAE90221F4E6E00C36B27 /* ServerConfig+CoreDataClass.swift */,
+				A0FAAE91221F4E6E00C36B27 /* ServerConfig+CoreDataProperties.swift */,
+				A0FAAE92221F4E6E00C36B27 /* AppConfig+CoreDataClass.swift */,
+				A0FAAE93221F4E6E00C36B27 /* AppConfig+CoreDataProperties.swift */,
+				A0FAAE73221F26EF00C36B27 /* PersistenceService.swift */,
+			);
+			path = storage;
+			sourceTree = "<group>";
+		};
+		A0FAAE9F222030C000C36B27 /* ControllersAndDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				A0065432221AD45300F9E2F7 /* AppDelegate.swift */,
+				A0065440221ADADF00F9E2F7 /* StatusMenuController.swift */,
+			);
+			path = ControllersAndDelegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

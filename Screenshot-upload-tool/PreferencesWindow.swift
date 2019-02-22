@@ -64,10 +64,8 @@ class PreferencesWindow: NSWindowController, NSTableViewDelegate, NSTableViewDat
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let cellView = NSTableCellView()
         if (tableView.identifier?.rawValue == "customUploaderTable") {
-            let cell = NSTextFieldCell()
             cellView.identifier = NSUserInterfaceItemIdentifier(rawValue: String(row))
         } else if (tableView.identifier?.rawValue == "customUploaderArgumentsTable") {
-            let cell = NSTextFieldCell()
             cellView.identifier = NSUserInterfaceItemIdentifier(rawValue: String(row))
         } else {
             return nil
