@@ -7,59 +7,81 @@
 //
 
 import Foundation
+import CoreData
 
 class Config: NSObject {
     let defaults = UserDefaults.standard
+    var appConfig = [AppConfig]()
     
-    public func setNoiseOption(quite: Bool) {
-        defaults.set(quite, forKey: "quite")
+    public override init() {
+        let fetchrequest: NSFetchRequest<AppConfig> = AppConfig.fetchRequest()
+        
+        do {
+            let appConfig = try PersistenceService.context.fetch(fetchrequest)
+            if(appConfig.count == 0) {
+                let _appConfig = AppConfig(context: PersistenceService.context)
+                _appConfig.imageType = "png"
+                _appConfig.saveFolder = NSHomeDirectory() + "/Desktop/"
+                _appConfig.defaultServerConfig = ServerConfig(context: PersistenceService.context)
+                var url = URLComponents()
+                url.scheme = "http"
+                url.host = "localhost"
+                url.path = "/upload"
+                url.port = 5000
+                //_appConfig.defaultServerConfig!.uploadUrl = URL(fileURLWithPath: "localhost")
+                _appConfig.defaultServerConfig!.uploadUrl = url.url!
+                //_appConfig.defaultServerConfig!.arguments = [String : String]()
+                _appConfig.defaultServerConfig!.arguments = ["username" : "andreas", "password" : "super-secret"]
+                _appConfig.defaultServerConfig!.fileFormName = "file"
+                var _appConfigArr = [AppConfig]()
+                _appConfigArr.append(_appConfig)
+                self.appConfig = _appConfigArr
+            } else {
+                self.appConfig = appConfig
+            }
+        } catch {
+            print("Oh no!")
+        }
     }
     
-    public func setSaveFolderLocation(location: URL) {
-        defaults.set(location, forKey: "location")
+    public func setNoiseOption(quite: Bool) {
+        appConfig[0].noise = quite
+    }
+    
+    public func setImageType(type: String) {
+        appConfig[0].imageType = type
+    }
+    
+    public func setSaveFolderLocation(location: String) {
+        appConfig[0].saveFolder = location
+    }
+    
+    public func setDefaultServerConfig(ServerConfig: ServerConfig) {
+        appConfig[0].defaultServerConfig = ServerConfig
     }
     
     public func getNoiseOption() -> Bool {
-        let value = defaults.bool(forKey: "quite")
-        if(value == false) {
-            return false
-        }
-        return value
+        return appConfig[0].noise
     }
     
-    public func getSaveFolderLocation() -> URL {
-        let value = defaults.url(forKey: "location")
-        if(value == nil) {
-            //return URL(fileURLWithPath: )
-            return URL(fileURLWithPath: "~/Library/Application Support")
-        } else {
-           return value!
-        }
+    public func getImageType() -> String {
+        return appConfig[0].imageType ?? "png"
+    }
+    
+    public func getSaveFolderLocation() -> String {
+        return appConfig[0].saveFolder ?? NSHomeDirectory() + "/Desktop/"
     }
     
     public func getDefaultUploadURL() -> URL {
-        var url = URLComponents()
-        url.scheme = "http"
-        url.host = "localhost"
-        url.path = "/upload"
-        url.port = 5000
-        //let url = URL(string: "https://api.imgur.com/3/image")!
-        let fallback = URL(string: "https://localhost")!
-        guard let URL = url.url else {
-            //TODO: ERROR HANDLING HERE
-            return fallback
-        }
-        return URL;
+        return appConfig[0].defaultServerConfig?.uploadUrl ?? URL(fileURLWithPath: "https://localhost")
     }
     
     public func getDefaultArguments() -> [String : String] {
-        let arguments = ["username": "andreas", "password": "super-secret"]
-        //let arguments = [String : String]()
-        return arguments
+        return appConfig[0].defaultServerConfig?.arguments ?? [String : String]()
     }
     
     public func getDefaultFileFormName() -> String {
-        return "file"
+        return appConfig[0].defaultServerConfig?.fileFormName ?? "file"
     }
 }
 

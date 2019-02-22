@@ -10,13 +10,9 @@ import Foundation
 import AppKit
 
 class UploadAPI {
-    let config = Config()
     
-    func uploadImage(rawImage: NSImage, type: String, name: String) {
-        let url = config.getDefaultUploadURL()
-        let arguments = config.getDefaultArguments()
-        let fileFormName = config.getDefaultFileFormName()
-        
+    func uploadImage(rawImage: NSImage, type: String, name: String, url: URL, arguments: [String : String], fileFormName: String) {
+
         let boundary = generateBoundary()
         
         var request = URLRequest(url: url)

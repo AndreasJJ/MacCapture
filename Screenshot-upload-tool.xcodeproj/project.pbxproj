@@ -16,8 +16,15 @@
 		A0065449221AF22400F9E2F7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0065448221AF22400F9E2F7 /* Config.swift */; };
 		A006544D221AF58900F9E2F7 /* ImageObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A006544C221AF58900F9E2F7 /* ImageObserver.swift */; };
 		A063609A221CAC96002DA7C3 /* Screencapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0636099221CAC96002DA7C3 /* Screencapture.swift */; };
-		A063609C221D5597002DA7C3 /* LinksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A063609B221D5597002DA7C3 /* LinksListView.swift */; };
-		A0FAAE50221EC75C00C36B27 /* serverConfigStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAAE4F221EC75C00C36B27 /* serverConfigStruct.swift */; };
+		A0FAAE55221F257300C36B27 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0FAAE54221F257300C36B27 /* CoreData.framework */; };
+		A0FAAE74221F26EF00C36B27 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAAE73221F26EF00C36B27 /* PersistenceService.swift */; };
+		A0FAAE7F221F4C5800C36B27 /* Screenshot-upload-tool.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0FAAE7D221F4C5800C36B27 /* Screenshot-upload-tool.xcdatamodeld */; };
+		A0FAAE94221F4E6E00C36B27 /* ServerConfig+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAAE90221F4E6E00C36B27 /* ServerConfig+CoreDataClass.swift */; };
+		A0FAAE95221F4E6E00C36B27 /* ServerConfig+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAAE91221F4E6E00C36B27 /* ServerConfig+CoreDataProperties.swift */; };
+		A0FAAE96221F4E6E00C36B27 /* AppConfig+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAAE92221F4E6E00C36B27 /* AppConfig+CoreDataClass.swift */; };
+		A0FAAE97221F4E6E00C36B27 /* AppConfig+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAAE93221F4E6E00C36B27 /* AppConfig+CoreDataProperties.swift */; };
+		A0FAAE9C221F57A500C36B27 /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAAE9A221F57A500C36B27 /* PreferencesWindow.swift */; };
+		A0FAAE9D221F57A500C36B27 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0FAAE9B221F57A500C36B27 /* PreferencesWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +40,15 @@
 		A0065448221AF22400F9E2F7 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		A006544C221AF58900F9E2F7 /* ImageObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageObserver.swift; sourceTree = "<group>"; };
 		A0636099221CAC96002DA7C3 /* Screencapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screencapture.swift; sourceTree = "<group>"; };
-		A063609B221D5597002DA7C3 /* LinksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksListView.swift; sourceTree = "<group>"; };
-		A0FAAE4F221EC75C00C36B27 /* serverConfigStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = serverConfigStruct.swift; sourceTree = "<group>"; };
+		A0FAAE54221F257300C36B27 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A0FAAE73221F26EF00C36B27 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		A0FAAE7E221F4C5800C36B27 /* Screenshot-upload-tool.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Screenshot-upload-tool.xcdatamodel"; sourceTree = "<group>"; };
+		A0FAAE90221F4E6E00C36B27 /* ServerConfig+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerConfig+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A0FAAE91221F4E6E00C36B27 /* ServerConfig+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerConfig+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A0FAAE92221F4E6E00C36B27 /* AppConfig+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A0FAAE93221F4E6E00C36B27 /* AppConfig+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A0FAAE9A221F57A500C36B27 /* PreferencesWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindow.swift; sourceTree = "<group>"; };
+		A0FAAE9B221F57A500C36B27 /* PreferencesWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreferencesWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0FAAE55221F257300C36B27 /* CoreData.framework in Frameworks */,
 				A0065446221AE19B00F9E2F7 /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,6 +84,10 @@
 		A0065431221AD45300F9E2F7 /* Screenshot-upload-tool */ = {
 			isa = PBXGroup;
 			children = (
+				A0FAAE90221F4E6E00C36B27 /* ServerConfig+CoreDataClass.swift */,
+				A0FAAE91221F4E6E00C36B27 /* ServerConfig+CoreDataProperties.swift */,
+				A0FAAE92221F4E6E00C36B27 /* AppConfig+CoreDataClass.swift */,
+				A0FAAE93221F4E6E00C36B27 /* AppConfig+CoreDataProperties.swift */,
 				A0065447221AF14600F9E2F7 /* Functionality */,
 				A0065432221AD45300F9E2F7 /* AppDelegate.swift */,
 				A0065434221AD45300F9E2F7 /* Assets.xcassets */,
@@ -76,7 +95,10 @@
 				A0065439221AD45300F9E2F7 /* Info.plist */,
 				A006543A221AD45300F9E2F7 /* Screenshot_upload_tool.entitlements */,
 				A0065440221ADADF00F9E2F7 /* StatusMenuController.swift */,
-				A063609B221D5597002DA7C3 /* LinksListView.swift */,
+				A0FAAE73221F26EF00C36B27 /* PersistenceService.swift */,
+				A0FAAE7D221F4C5800C36B27 /* Screenshot-upload-tool.xcdatamodeld */,
+				A0FAAE9A221F57A500C36B27 /* PreferencesWindow.swift */,
+				A0FAAE9B221F57A500C36B27 /* PreferencesWindow.xib */,
 			);
 			path = "Screenshot-upload-tool";
 			sourceTree = "<group>";
@@ -84,6 +106,7 @@
 		A0065444221AE19B00F9E2F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A0FAAE54221F257300C36B27 /* CoreData.framework */,
 				A0065445221AE19B00F9E2F7 /* AppKit.framework */,
 			);
 			name = Frameworks;
@@ -96,7 +119,6 @@
 				A0065448221AF22400F9E2F7 /* Config.swift */,
 				A006544C221AF58900F9E2F7 /* ImageObserver.swift */,
 				A0636099221CAC96002DA7C3 /* Screencapture.swift */,
-				A0FAAE4F221EC75C00C36B27 /* serverConfigStruct.swift */,
 			);
 			path = Functionality;
 			sourceTree = "<group>";
@@ -165,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0065435221AD45300F9E2F7 /* Assets.xcassets in Resources */,
+				A0FAAE9D221F57A500C36B27 /* PreferencesWindow.xib in Resources */,
 				A0065438221AD45300F9E2F7 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,9 +203,14 @@
 				A0065449221AF22400F9E2F7 /* Config.swift in Sources */,
 				A006544D221AF58900F9E2F7 /* ImageObserver.swift in Sources */,
 				A063609A221CAC96002DA7C3 /* Screencapture.swift in Sources */,
+				A0FAAE94221F4E6E00C36B27 /* ServerConfig+CoreDataClass.swift in Sources */,
+				A0FAAE9C221F57A500C36B27 /* PreferencesWindow.swift in Sources */,
 				A0065441221ADADF00F9E2F7 /* StatusMenuController.swift in Sources */,
-				A0FAAE50221EC75C00C36B27 /* serverConfigStruct.swift in Sources */,
-				A063609C221D5597002DA7C3 /* LinksListView.swift in Sources */,
+				A0FAAE95221F4E6E00C36B27 /* ServerConfig+CoreDataProperties.swift in Sources */,
+				A0FAAE96221F4E6E00C36B27 /* AppConfig+CoreDataClass.swift in Sources */,
+				A0FAAE74221F26EF00C36B27 /* PersistenceService.swift in Sources */,
+				A0FAAE97221F4E6E00C36B27 /* AppConfig+CoreDataProperties.swift in Sources */,
+				A0FAAE7F221F4C5800C36B27 /* Screenshot-upload-tool.xcdatamodeld in Sources */,
 				A0065433221AD45300F9E2F7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,6 +402,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A0FAAE7D221F4C5800C36B27 /* Screenshot-upload-tool.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A0FAAE7E221F4C5800C36B27 /* Screenshot-upload-tool.xcdatamodel */,
+			);
+			currentVersion = A0FAAE7E221F4C5800C36B27 /* Screenshot-upload-tool.xcdatamodel */;
+			path = "Screenshot-upload-tool.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A0065427221AD45300F9E2F7 /* Project object */;
 }

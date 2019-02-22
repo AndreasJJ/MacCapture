@@ -10,8 +10,7 @@ import Cocoa
 
 class StatusMenuController: NSObject {
     @IBOutlet weak var statusMenu: NSMenu!
-    @IBOutlet weak var LinksListView: LinksListView!
-    var linksListMenuItem: NSMenuItem!
+    var preferencesWindow: PreferencesWindow!
     
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     
@@ -23,23 +22,36 @@ class StatusMenuController: NSObject {
         icon?.isTemplate = true // best for dark mode
         statusItem.image = icon
         statusItem.menu = statusMenu
+        preferencesWindow = PreferencesWindow()
         
-        linksListMenuItem = statusMenu.item(withTitle: "Links")
-        linksListMenuItem.view = LinksListView
-        
-        _ = ImageObserver(path: NSHomeDirectory() + "/Desktop/")
+        _ = ImageObserver(path: config.getSaveFolderLocation(), callback: postFile)
+    }
+    
+    func postFile(paths: [URL]) {
+        print(paths)
+        let uploader = UploadAPI()
+        for path in paths {
+            let image: NSImage = NSImage(contentsOf: path)!
+            let name = (path.path as NSString).lastPathComponent
+            let path = path.pathExtension
+            uploader.uploadImage(rawImage: image, type: path, name: name, url: config.getDefaultUploadURL(), arguments: config.getDefaultArguments(), fileFormName: config.getDefaultFileFormName())
+        }
     }
     
     @IBAction func fullscreenClicked(sender: NSMenuItem) {
-        screencapture.takeFullscreen(path: "/Users/andreasjj/Desktop/" + UUID.init().uuidString, type: "png", quiet: true)
+        screencapture.takeFullscreen(path: config.getSaveFolderLocation() + "/" + UUID.init().uuidString, type: config.getImageType(), quiet: config.getNoiseOption())
     }
     
     @IBAction func regionClicked(sender: NSMenuItem) {
-        screencapture.takeRegion(path: "/Users/andreasjj/Desktop/" + UUID.init().uuidString, type: "png", quiet: true)
+        screencapture.takeRegion(path: config.getSaveFolderLocation() + "/" + UUID.init().uuidString, type: config.getImageType(), quiet: config.getNoiseOption())
     }
     
     @IBAction func windowClicked(sender: NSMenuItem) {
-        screencapture.takeWindow(path: "/Users/andreasjj/Desktop/" + UUID.init().uuidString, type: "png", quiet: true)
+        screencapture.takeWindow(path: config.getSaveFolderLocation() + "/" + UUID.init().uuidString, type: config.getImageType(), quiet: config.getNoiseOption())
+    }
+    
+    @IBAction func preferencesClicked(sender: NSMenuItem) {
+        preferencesWindow.showWindow(nil)
     }
     
     @IBAction func quitClicked(sender: NSMenuItem) {

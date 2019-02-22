@@ -11,18 +11,12 @@ import AppKit
 
 class ImageObserver: NSObject {
     
-    func postFile(paths: [URL]) {
-        let uploader = UploadAPI()
-        for path in paths {
-            let image: NSImage = NSImage(contentsOf: path)!
-            let name = (path.path as NSString).lastPathComponent
-            let path = path.pathExtension
-            uploader.uploadImage(rawImage: image, type: path, name: name)
-        }
-    }
+    var callback: (([URL])->())? = nil
     
-    init(path: String) {
+    init(path: String, callback: @escaping ([URL])->() ) {
         super.init()
+        
+        self.callback = callback
         
         let allocator: CFAllocator? = kCFAllocatorDefault
         let callback: FSEventStreamCallback = {
@@ -41,9 +35,8 @@ class ImageObserver: NSObject {
                     }
                 }
                 if(_paths.count != 0) {
-                    observerSelf.postFile(paths: _paths)
+                    observerSelf.callback!(_paths)
                 }
-            
         }
         var context = FSEventStreamContext(version: 0, info: Unmanaged.passRetained(self).toOpaque(), retain: nil, release: nil, copyDescription: nil)
         let pathsToWatch: CFArray = [path] as CFArray

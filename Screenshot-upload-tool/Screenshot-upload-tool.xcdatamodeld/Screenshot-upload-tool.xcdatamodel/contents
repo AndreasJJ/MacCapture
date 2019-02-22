@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AppConfig" representedClassName="AppConfig" syncable="YES">
+        <attribute name="imageType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="noise" optional="YES" attributeType="Boolean" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="saveFolder" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="defaultServerConfig" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ServerConfig" syncable="YES"/>
+    </entity>
+    <entity name="ServerConfig" representedClassName="ServerConfig" syncable="YES">
+        <attribute name="arguments" optional="YES" attributeType="Transformable" customClassName="[String : String]" syncable="YES"/>
+        <attribute name="fileFormName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uploadUrl" optional="YES" attributeType="Transformable" customClassName="URL" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AppConfig" positionX="-45" positionY="0" width="128" height="105"/>
+        <element name="ServerConfig" positionX="-18" positionY="27" width="128" height="90"/>
+    </elements>
+</model>
