@@ -12,9 +12,15 @@ import CoreData
 class Config: NSObject {
     let defaults = UserDefaults.standard
     var appConfig = [AppConfig]()
+    var serversConfig = [ServerConfig]()
     
     public override init() {
         let fetchrequest: NSFetchRequest<AppConfig> = AppConfig.fetchRequest()
+        let serversFetchRequest: NSFetchRequest<ServerConfig> = ServerConfig.fetchRequest()
+        
+        do {
+            self.serversConfig = try PersistenceService.context.fetch(serversFetchRequest)
+        }catch {}
         
         do {
             let appConfig = try PersistenceService.context.fetch(fetchrequest)
@@ -42,6 +48,10 @@ class Config: NSObject {
         } catch {
             print("Oh no!")
         }
+    }
+    
+    public func getServersConfig() -> [ServerConfig] {
+        return self.serversConfig
     }
     
     public func setNoiseOption(quite: Bool) {

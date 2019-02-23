@@ -25,8 +25,9 @@ class PreferencesWindow: NSWindowController, NSTableViewDelegate, NSTableViewDat
     //Other variables
     let config = Config()
     
-    let customUploaderTableData = ["item1", "item2", "item3"]
-    let customUploaderArgumentsTableData = ["item1", "item2"]
+    var customUploaderTableData = [String]()
+    var customUploaderArgumentsTableNameColumnData = [String]()
+    var customUploaderArgumentsTableValueColumnData = [String]()
     
     override var windowNibName : String! {
         return "PreferencesWindow"
@@ -41,6 +42,13 @@ class PreferencesWindow: NSWindowController, NSTableViewDelegate, NSTableViewDat
         customUploaderTable.beginUpdates()
         customUploaderTable.headerView = nil;
         customUploaderTable.endUpdates()
+        for serverConfig in config.getServersConfig() {
+            if(serverConfig.name == nil) {
+                continue
+            }
+            customUploaderTableData.append(serverConfig.name!)
+        }
+        self.customUploaderTable.reloadData()
     }
     
     override func windowDidLoad() {
@@ -55,7 +63,7 @@ class PreferencesWindow: NSWindowController, NSTableViewDelegate, NSTableViewDat
         if (tableView.identifier?.rawValue == "customUploaderTable") {
             return customUploaderTableData.count
         } else if (tableView.identifier?.rawValue == "customUploaderArgumentsTable") {
-            return customUploaderArgumentsTableData.count
+            return customUploaderArgumentsTableNameColumnData.count
         } else {
             return 0
         }
@@ -63,10 +71,27 @@ class PreferencesWindow: NSWindowController, NSTableViewDelegate, NSTableViewDat
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let cellView = NSTableCellView()
+        let textField = NSTextField()
+        cellView.addSubview(textField, positioned: NSWindow.OrderingMode.above, relativeTo: nil)
+        cellView.textField = cellView.subviews[0] as? NSTextField
+        let newSize = CGSize(width: tableView.frameOfCell(atColumn: 0, row: 0).width, height:  tableView.frameOfCell(atColumn: 0, row: 0).height)
+        let newFrame = CGRect(origin: CGPoint.init(x: 0.0, y: 0.0), size: newSize)
+        cellView.textField!.frame = newFrame
+        
+        cellView.textField?.alignment = .center
+        cellView.textField?.usesSingleLineMode = true
+        cellView.identifier = NSUserInterfaceItemIdentifier(rawValue: String(row))
+        
         if (tableView.identifier?.rawValue == "customUploaderTable") {
-            cellView.identifier = NSUserInterfaceItemIdentifier(rawValue: String(row))
+            cellView.textField?.stringValue = customUploaderTableData[row]
         } else if (tableView.identifier?.rawValue == "customUploaderArgumentsTable") {
-            cellView.identifier = NSUserInterfaceItemIdentifier(rawValue: String(row))
+            if(tableColumn?.identifier.rawValue == "customUploaderArgumentsTableNameColumn") {
+                cellView.textField?.stringValue = customUploaderArgumentsTableNameColumnData[row]
+            } else if (tableColumn?.identifier.rawValue == "customUploaderArgumentsTableValueColumn") {
+                cellView.textField?.stringValue = customUploaderArgumentsTableValueColumnData[row]
+            } else {
+                return nil
+            }
         } else {
             return nil
         }
@@ -78,6 +103,7 @@ class PreferencesWindow: NSWindowController, NSTableViewDelegate, NSTableViewDat
     @IBAction func clickedApplyAndSaveButton(_ sender: Any) {
         
     }
+    
     //Server Configuration functions
     @IBAction func clickedCustomUploaderAddButton(_ sender: Any) {
         print("works")

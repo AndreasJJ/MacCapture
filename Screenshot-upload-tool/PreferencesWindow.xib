@@ -271,7 +271,7 @@
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                         <tableColumns>
-                                                            <tableColumn width="118" minWidth="40" maxWidth="1000" id="zVo-lD-ETl">
+                                                            <tableColumn identifier="customUploaderArgumentsTableNameColumn" width="118" minWidth="40" maxWidth="1000" id="zVo-lD-ETl">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Name">
                                                                     <font key="font" metaFont="smallSystem"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -284,7 +284,7 @@
                                                                 </textFieldCell>
                                                                 <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             </tableColumn>
-                                                            <tableColumn width="114" minWidth="40" maxWidth="1000" id="Hlc-Ys-dls">
+                                                            <tableColumn identifier="customUploaderArgumentsTableValueColumn" width="114" minWidth="40" maxWidth="1000" id="Hlc-Ys-dls">
                                                                 <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Value">
                                                                     <font key="font" metaFont="smallSystem"/>
                                                                     <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
