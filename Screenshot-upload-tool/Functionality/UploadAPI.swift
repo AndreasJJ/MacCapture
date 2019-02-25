@@ -9,7 +9,7 @@
 import Foundation
 import AppKit
 
-class UploadAPI {
+class UploadAPI: NSObject {
     
     func uploadImage(rawImage: NSImage, type: String, name: String, url: URL, arguments: [String : String], fileFormName: String) {
 
@@ -34,9 +34,16 @@ class UploadAPI {
                 print("Something went wrong. No picture link was given in the response.")
                 return
             }
-            print(imageURL.absoluteString)
             NSPasteboard.general.clearContents()
             NSPasteboard.general.setString(imageURL.absoluteString, forType: NSPasteboard.PasteboardType.string)
+            
+            let notification = NSUserNotification()
+            notification.identifier = imageURL.absoluteString
+            notification.title = "Finished Uploading!"
+            notification.informativeText = imageURL.absoluteString
+            //notification.soundName = NSUserNotificationDefaultSoundName
+            let notificationCenter = NSUserNotificationCenter.default
+            notificationCenter.deliver(notification)
         }
         task.resume()
     }
