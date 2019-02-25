@@ -2,4 +2,4 @@
 A screenshot tool for Mac that uploads the screenshot to a custom server, imgur, etc.
 
 # Status
-**Broken**: The program is kind of broken as the save folder hasnt been set correctly and theres no other way than editing the code to change the upload API settings as the preferences window is broken.
+**Broken**: The program is semi functional. Documentation needs to be writte,error handling must be implemented and issues needs to be resolved, but it now uploads images and pastes the link into your pasteboard on servers with simple upload API's.
