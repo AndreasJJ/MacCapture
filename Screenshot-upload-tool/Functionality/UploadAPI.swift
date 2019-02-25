@@ -28,12 +28,15 @@ class UploadAPI {
             guard responseError == nil else {
                 return
             }
-            // APIs usually respond with the data you just sent in your POST request
+            
             guard let imageURL = response?.url else {
+                //TODO??
                 print("Something went wrong. No picture link was given in the response.")
                 return
             }
-            print(imageURL)
+            print(imageURL.absoluteString)
+            NSPasteboard.general.clearContents()
+            NSPasteboard.general.setString(imageURL.absoluteString, forType: NSPasteboard.PasteboardType.string)
         }
         task.resume()
     }

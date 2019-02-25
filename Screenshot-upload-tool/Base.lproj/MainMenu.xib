@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -56,5 +57,15 @@
             </items>
             <point key="canvasLocation" x="-43.5" y="-87"/>
         </menu>
+        <customView id="nns-nG-KOn" customClass="View" customModule="Screenshot_upload_tool" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="163" height="96"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <point key="canvasLocation" x="172" y="59"/>
+        </customView>
+        <customView id="ao5-tG-Sms" customClass="View" customModule="Screenshot_upload_tool" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="163" height="96"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <point key="canvasLocation" x="221" y="-90"/>
+        </customView>
     </objects>
 </document>

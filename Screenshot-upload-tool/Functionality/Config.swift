@@ -28,7 +28,8 @@ class Config: NSObject {
                 let _appConfig = AppConfig(context: PersistenceService.context)
                 _appConfig.imageType = "png"
                 _appConfig.saveFolder = NSHomeDirectory() + "/Desktop/"
-                _appConfig.defaultServerConfig = ServerConfig(context: PersistenceService.context)
+                /*_appConfig.defaultServerConfig = ServerConfig(context: PersistenceService.context)
+                _appConfig.defaultServerConfig?.name = "Test"
                 var url = URLComponents()
                 url.scheme = "http"
                 url.host = "localhost"
@@ -38,7 +39,7 @@ class Config: NSObject {
                 _appConfig.defaultServerConfig!.uploadUrl = url.url!
                 //_appConfig.defaultServerConfig!.arguments = [String : String]()
                 _appConfig.defaultServerConfig!.arguments = ["username" : "andreas", "password" : "super-secret"]
-                _appConfig.defaultServerConfig!.fileFormName = "file"
+                _appConfig.defaultServerConfig!.fileFormName = "file"*/
                 var _appConfigArr = [AppConfig]()
                 _appConfigArr.append(_appConfig)
                 self.appConfig = _appConfigArr
@@ -56,18 +57,22 @@ class Config: NSObject {
     
     public func setNoiseOption(quite: Bool) {
         appConfig[0].noise = quite
+        PersistenceService.saveAction()
     }
     
     public func setImageType(type: String) {
         appConfig[0].imageType = type
+        PersistenceService.saveAction()
     }
     
     public func setSaveFolderLocation(location: String) {
         appConfig[0].saveFolder = location
+        PersistenceService.saveAction()
     }
     
     public func setDefaultServerConfig(ServerConfig: ServerConfig) {
         appConfig[0].defaultServerConfig = ServerConfig
+        PersistenceService.saveAction()
     }
     
     public func getNoiseOption() -> Bool {

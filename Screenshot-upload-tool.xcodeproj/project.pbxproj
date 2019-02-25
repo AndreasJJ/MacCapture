@@ -25,6 +25,7 @@
 		A0FAAEA52221999A00C36B27 /* ServerConfig+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAAEA12221999A00C36B27 /* ServerConfig+CoreDataProperties.swift */; };
 		A0FAAEA62221999A00C36B27 /* AppConfig+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAAEA22221999A00C36B27 /* AppConfig+CoreDataClass.swift */; };
 		A0FAAEA72221999A00C36B27 /* AppConfig+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAAEA32221999A00C36B27 /* AppConfig+CoreDataProperties.swift */; };
+		A0FAAED52223F72F00C36B27 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAAED42223F72F00C36B27 /* View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		A0FAAEA12221999A00C36B27 /* ServerConfig+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerConfig+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A0FAAEA22221999A00C36B27 /* AppConfig+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A0FAAEA32221999A00C36B27 /* AppConfig+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A0FAAED42223F72F00C36B27 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				A006543A221AD45300F9E2F7 /* Screenshot_upload_tool.entitlements */,
 				A0065439221AD45300F9E2F7 /* Info.plist */,
 				A0065434221AD45300F9E2F7 /* Assets.xcassets */,
+				A0FAAED42223F72F00C36B27 /* View.swift */,
 			);
 			path = "Screenshot-upload-tool";
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				A0FAAEA72221999A00C36B27 /* AppConfig+CoreDataProperties.swift in Sources */,
 				A0FAAE7F221F4C5800C36B27 /* Screenshot-upload-tool.xcdatamodeld in Sources */,
 				A0FAAEA42221999A00C36B27 /* ServerConfig+CoreDataClass.swift in Sources */,
+				A0FAAED52223F72F00C36B27 /* View.swift in Sources */,
 				A0065433221AD45300F9E2F7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

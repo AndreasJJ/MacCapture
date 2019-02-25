@@ -25,6 +25,30 @@ class StatusMenuController: NSObject {
         preferencesWindow = PreferencesWindow()
         
         _ = ImageObserver(path: config.getSaveFolderLocation(), callback: postFile)
+        
+        let options: NSDictionary = [kAXTrustedCheckOptionPrompt.takeUnretainedValue() as String : true]
+        let accessEnabled = AXIsProcessTrustedWithOptions(options)
+        
+        if(!accessEnabled) {
+            print("failed")
+        }
+        
+        NSEvent.addGlobalMonitorForEvents(matching: .keyDown) {
+            self.keyDown(with: $0)
+        }
+    }
+    
+    func keyDown(with event: NSEvent) {
+        switch event.modifierFlags.intersection(.deviceIndependentFlagsMask) {
+        case [.shift, .command] where event.keyCode == 20:
+            screencapture.takeRegion(path: config.getSaveFolderLocation() + "/" + UUID.init().uuidString, type: config.getImageType(), quiet: config.getNoiseOption())
+            break
+        case [.shift, .command] where event.keyCode == 21:
+            screencapture.takeFullscreen(path: config.getSaveFolderLocation() + "/" + UUID.init().uuidString, type: config.getImageType(), quiet: config.getNoiseOption())
+            break
+        default:
+            break
+        }
     }
     
     func postFile(paths: [URL]) {
