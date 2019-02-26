@@ -43,7 +43,7 @@
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="Settings" identifier="" id="T0Z-d3-BQv">
-                                <view key="view" ambiguous="YES" id="zB1-41-tfd">
+                                <view key="view" id="zB1-41-tfd">
                                     <rect key="frame" x="10" y="33" width="537" height="336"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -146,7 +146,7 @@
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="Server Configurations" identifier="" id="e72-Cf-gEY">
-                                <view key="view" id="C2P-pE-fZb">
+                                <view key="view" ambiguous="YES" id="C2P-pE-fZb">
                                     <rect key="frame" x="10" y="33" width="537" height="336"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>

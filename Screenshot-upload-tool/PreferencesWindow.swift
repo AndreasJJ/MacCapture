@@ -27,7 +27,7 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate, NSTableViewDelega
     @IBOutlet weak var customUploaderFileFormNameInput: NSTextField!
     @IBOutlet weak var customUploaderArgumentNameInput: NSTextField!
     @IBOutlet weak var customUploaderArgumentValueInput: NSTextField!
-    @IBOutlet weak var CustomUploaderArgumentsTable: NSTableView!
+    @IBOutlet weak var customUploaderArgumentsTable: NSTableView!
     //Other variables
     let config = Config()
     
@@ -133,7 +133,7 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate, NSTableViewDelega
             customUploaderArgumentValueInput.stringValue = ""
             customUploaderArgumentsTableNameColumnData.removeAll()
             customUploaderArgumentsTableValueColumnData.removeAll()
-            self.CustomUploaderArgumentsTable.reloadData()
+            self.customUploaderArgumentsTable.reloadData()
             if(table.selectedRow >= serverConfigs.count || table.selectedRow < 0) {
                 return
             }
@@ -147,7 +147,7 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate, NSTableViewDelega
                 customUploaderArgumentsTableNameColumnData.append(argument.key)
                 customUploaderArgumentsTableValueColumnData.append(argument.value)
             }
-            self.CustomUploaderArgumentsTable.reloadData()
+            self.customUploaderArgumentsTable.reloadData()
         }
     }
     
@@ -196,7 +196,7 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate, NSTableViewDelega
         customUploaderArgumentNameInput.stringValue = ""
         customUploaderArgumentValueInput.stringValue = ""
         PersistenceService.saveAction()
-        self.CustomUploaderArgumentsTable.reloadData()
+        self.customUploaderArgumentsTable.reloadData()
     }
     
     @IBAction func clickedCustomUploaderArgumentsRemoveButton(_ sender: Any) {
@@ -205,16 +205,16 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate, NSTableViewDelega
             return
         }
         //
-        let row = CustomUploaderArgumentsTable.selectedRow
+        let row = customUploaderArgumentsTable.selectedRow
         if(row < 0) {
             return
         }
-        let name = (CustomUploaderArgumentsTable.view(atColumn: 0, row: row, makeIfNecessary: false)?.subviews[0] as! NSTextField).stringValue
+        let name = (customUploaderArgumentsTable.view(atColumn: 0, row: row, makeIfNecessary: false)?.subviews[0] as! NSTextField).stringValue
         config.getServersConfig()[server].arguments?.removeValue(forKey: name)
         customUploaderArgumentsTableNameColumnData.remove(at: row)
         customUploaderArgumentsTableValueColumnData.remove(at: row)
         PersistenceService.saveAction()
-        self.CustomUploaderArgumentsTable.reloadData()
+        self.customUploaderArgumentsTable.reloadData()
     }
     
     @IBAction func clickedCustomUploaderArgumentsUpdateButton(_ sender: Any) {
