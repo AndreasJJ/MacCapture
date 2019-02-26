@@ -102,6 +102,8 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate, NSTableViewDelega
         cellView.textField?.alignment = .center
         cellView.textField?.usesSingleLineMode = true
         cellView.identifier = NSUserInterfaceItemIdentifier(rawValue: String(row))
+        cellView.textField?.isEditable = false
+        cellView.textField?.isSelectable = false
         
         if (tableView.identifier?.rawValue == "customUploaderTable") {
             cellView.textField?.stringValue = customUploaderTableData[row]
