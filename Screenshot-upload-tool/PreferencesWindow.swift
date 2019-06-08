@@ -17,6 +17,7 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate, NSTableViewDelega
     //Settings items
     @IBOutlet weak var quiteButton: NSButton!
     @IBOutlet weak var imageFormatList: NSPopUpButton!
+    @IBOutlet weak var saveImage: NSButton!
     @IBOutlet weak var saveLocationInput: NSTextField!
     @IBOutlet weak var serverList: NSPopUpButton!
     
@@ -67,7 +68,20 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate, NSTableViewDelega
             quiteButton.state = .off
             break
         }
+        
         imageFormatList.selectItem(withTitle: config.getImageType())
+        
+        switch config.getSaveImage() {
+        case true:
+            saveImage.state = .on
+            saveLocationInput.isEnabled = true
+            break
+        case false:
+            saveImage.state = .off
+            saveLocationInput.isEnabled = false
+            break
+        }
+        
         saveLocationInput.stringValue = config.getSaveFolderLocation()
     }
     
@@ -264,6 +278,21 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate, NSTableViewDelega
             config.setNoiseOption(quite: false)
         default:
             config.setNoiseOption(quite: false)
+        }
+    }
+    
+    @IBAction func saveImageButtonDidChange(_ sender: NSButton) {
+        switch sender.state {
+        case .on:
+            config.setSaveImage(option: true)
+            saveLocationInput.isEnabled = true
+            break
+        case .off:
+            config.setSaveImage(option: false)
+            saveLocationInput.isEnabled = false
+        default:
+            config.setSaveImage(option: false)
+            saveLocationInput.isEnabled = false
         }
     }
     

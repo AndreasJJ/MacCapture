@@ -65,6 +65,11 @@ class Config: NSObject {
         PersistenceService.saveAction()
     }
     
+    public func setSaveImage(option: Bool) {
+        appConfig[0].saveImage = option
+        PersistenceService.saveAction()
+    }
+    
     public func setSaveFolderLocation(location: String) {
         appConfig[0].saveFolder = location
         PersistenceService.saveAction()
@@ -83,8 +88,16 @@ class Config: NSObject {
         return appConfig[0].imageType ?? "png"
     }
     
+    public func getSaveImage() -> Bool {
+        return appConfig[0].saveImage
+    }
+    
     public func getSaveFolderLocation() -> String {
         return appConfig[0].saveFolder ?? NSHomeDirectory() + "/Desktop/"
+    }
+    
+    public func getDefaultSaveImage() -> Bool {
+        return appConfig[0].saveImage
     }
     
     public func getDefaultUploadURL() -> URL {

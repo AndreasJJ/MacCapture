@@ -18,6 +18,7 @@
                 <outlet property="imageFormatList" destination="Y1r-Wo-VT6" id="QtX-lK-6bl"/>
                 <outlet property="keybindingsButton" destination="dnO-XZ-jeb" id="7sk-4m-8GJ"/>
                 <outlet property="quiteButton" destination="prH-2L-hbc" id="1pe-tk-DgQ"/>
+                <outlet property="saveImage" destination="n7D-0F-bMq" id="bf1-7D-iu6"/>
                 <outlet property="saveLocationInput" destination="j6w-WG-9cd" id="Fzb-JB-rq4"/>
                 <outlet property="serverList" destination="p22-r5-WWg" id="ig0-aB-gO5"/>
                 <outlet property="tabView" destination="kPx-Uv-CfA" id="bC6-JS-Ek8"/>
@@ -43,12 +44,12 @@
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="Settings" identifier="" id="T0Z-d3-BQv">
-                                <view key="view" id="zB1-41-tfd">
+                                <view key="view" ambiguous="YES" id="zB1-41-tfd">
                                     <rect key="frame" x="10" y="33" width="537" height="336"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField identifier="saveFolderInput" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j6w-WG-9cd">
-                                            <rect key="frame" x="157" y="240" width="223" height="22"/>
+                                            <rect key="frame" x="156" y="214" width="223" height="22"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="8dh-7V-97x">
                                                 <font key="font" metaFont="system"/>
@@ -60,7 +61,7 @@
                                             </connections>
                                         </textField>
                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="prH-2L-hbc">
-                                            <rect key="frame" x="155" y="268" width="22" height="18"/>
+                                            <rect key="frame" x="155" y="269" width="22" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="RAd-L0-BsR">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -90,7 +91,7 @@
                                             </connections>
                                         </popUpButton>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nj6-XB-cXb">
-                                            <rect key="frame" x="114" y="247" width="37" height="37"/>
+                                            <rect key="frame" x="115" y="270" width="37" height="17"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="Quite" id="k5d-QC-iKY">
                                                 <font key="font" usesAppearanceFont="YES"/>
@@ -99,7 +100,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZgE-2C-1bt">
-                                            <rect key="frame" x="79" y="242" width="72" height="17"/>
+                                            <rect key="frame" x="83" y="217" width="72" height="17"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="Save folder" id="zWN-0r-GIL">
                                                 <font key="font" usesAppearanceFont="YES"/>
@@ -117,7 +118,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fo9-Qt-eR2">
-                                            <rect key="frame" x="112" y="217" width="44" height="17"/>
+                                            <rect key="frame" x="111" y="192" width="44" height="17"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="Server" id="V3w-lH-18V">
                                                 <font key="font" metaFont="system"/>
@@ -126,7 +127,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <popUpButton identifier="serverList" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p22-r5-WWg">
-                                            <rect key="frame" x="155" y="210" width="228" height="26"/>
+                                            <rect key="frame" x="154" y="185" width="228" height="26"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="Xik-j2-oYi">
                                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -142,11 +143,31 @@
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
                                         </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1zS-c7-wTa">
+                                            <rect key="frame" x="74" y="245" width="81" height="17"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="Save images" id="odT-6F-t8P">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n7D-0F-bMq">
+                                            <rect key="frame" x="155" y="243" width="22" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="flT-NS-Ua4">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="saveImageButtonDidChange:" target="-2" id="uvw-3b-69q"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="Server Configurations" identifier="" id="e72-Cf-gEY">
-                                <view key="view" ambiguous="YES" id="C2P-pE-fZb">
+                                <view key="view" id="C2P-pE-fZb">
                                     <rect key="frame" x="10" y="33" width="537" height="336"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>

@@ -57,8 +57,16 @@ class StatusMenuController: NSObject {
         for path in paths {
             let image: NSImage = NSImage(contentsOf: path)!
             let name = (path.path as NSString).lastPathComponent
-            let path = path.pathExtension
-            uploader.uploadImage(rawImage: image, type: path, name: name, url: config.getDefaultUploadURL(), arguments: config.getDefaultArguments(), fileFormName: config.getDefaultFileFormName())
+            let extention = path.pathExtension
+            uploader.uploadImage(rawImage: image, type: extention, name: name, url: config.getDefaultUploadURL(), arguments: config.getDefaultArguments(), fileFormName: config.getDefaultFileFormName())
+            if(!config.getDefaultSaveImage()) {
+                do {
+                    try FileManager.default.removeItem(at: path)
+                } catch {
+                    //Add error handler
+                    print(error)
+                }
+            }
         }
     }
     

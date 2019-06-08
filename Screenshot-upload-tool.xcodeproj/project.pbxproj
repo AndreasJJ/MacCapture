@@ -15,16 +15,16 @@
 		A0065446221AE19B00F9E2F7 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0065445221AE19B00F9E2F7 /* AppKit.framework */; };
 		A0065449221AF22400F9E2F7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0065448221AF22400F9E2F7 /* Config.swift */; };
 		A006544D221AF58900F9E2F7 /* ImageObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = A006544C221AF58900F9E2F7 /* ImageObserver.swift */; };
+		A057D4A122AC4038005A5398 /* ServerConfig+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A057D49D22AC4038005A5398 /* ServerConfig+CoreDataClass.swift */; };
+		A057D4A222AC4038005A5398 /* ServerConfig+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A057D49E22AC4038005A5398 /* ServerConfig+CoreDataProperties.swift */; };
+		A057D4A322AC4038005A5398 /* AppConfig+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A057D49F22AC4038005A5398 /* AppConfig+CoreDataClass.swift */; };
+		A057D4A422AC4038005A5398 /* AppConfig+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A057D4A022AC4038005A5398 /* AppConfig+CoreDataProperties.swift */; };
 		A063609A221CAC96002DA7C3 /* Screencapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0636099221CAC96002DA7C3 /* Screencapture.swift */; };
 		A0FAAE55221F257300C36B27 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0FAAE54221F257300C36B27 /* CoreData.framework */; };
 		A0FAAE74221F26EF00C36B27 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAAE73221F26EF00C36B27 /* PersistenceService.swift */; };
 		A0FAAE7F221F4C5800C36B27 /* Screenshot-upload-tool.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0FAAE7D221F4C5800C36B27 /* Screenshot-upload-tool.xcdatamodeld */; };
 		A0FAAE9C221F57A500C36B27 /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAAE9A221F57A500C36B27 /* PreferencesWindow.swift */; };
 		A0FAAE9D221F57A500C36B27 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0FAAE9B221F57A500C36B27 /* PreferencesWindow.xib */; };
-		A0FAAEA42221999A00C36B27 /* ServerConfig+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAAEA02221999A00C36B27 /* ServerConfig+CoreDataClass.swift */; };
-		A0FAAEA52221999A00C36B27 /* ServerConfig+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAAEA12221999A00C36B27 /* ServerConfig+CoreDataProperties.swift */; };
-		A0FAAEA62221999A00C36B27 /* AppConfig+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAAEA22221999A00C36B27 /* AppConfig+CoreDataClass.swift */; };
-		A0FAAEA72221999A00C36B27 /* AppConfig+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAAEA32221999A00C36B27 /* AppConfig+CoreDataProperties.swift */; };
 		A0FAAED52223F72F00C36B27 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAAED42223F72F00C36B27 /* View.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,16 +40,16 @@
 		A0065445221AE19B00F9E2F7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		A0065448221AF22400F9E2F7 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		A006544C221AF58900F9E2F7 /* ImageObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageObserver.swift; sourceTree = "<group>"; };
+		A057D49D22AC4038005A5398 /* ServerConfig+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerConfig+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A057D49E22AC4038005A5398 /* ServerConfig+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerConfig+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A057D49F22AC4038005A5398 /* AppConfig+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A057D4A022AC4038005A5398 /* AppConfig+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A0636099221CAC96002DA7C3 /* Screencapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screencapture.swift; sourceTree = "<group>"; };
 		A0FAAE54221F257300C36B27 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A0FAAE73221F26EF00C36B27 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		A0FAAE7E221F4C5800C36B27 /* Screenshot-upload-tool.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Screenshot-upload-tool.xcdatamodel"; sourceTree = "<group>"; };
 		A0FAAE9A221F57A500C36B27 /* PreferencesWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindow.swift; sourceTree = "<group>"; };
 		A0FAAE9B221F57A500C36B27 /* PreferencesWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreferencesWindow.xib; sourceTree = "<group>"; };
-		A0FAAEA02221999A00C36B27 /* ServerConfig+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerConfig+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A0FAAEA12221999A00C36B27 /* ServerConfig+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerConfig+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A0FAAEA22221999A00C36B27 /* AppConfig+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+CoreDataClass.swift"; sourceTree = "<group>"; };
-		A0FAAEA32221999A00C36B27 /* AppConfig+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A0FAAED42223F72F00C36B27 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,10 +123,10 @@
 		A0FAAE9E2220303F00C36B27 /* storage */ = {
 			isa = PBXGroup;
 			children = (
-				A0FAAEA02221999A00C36B27 /* ServerConfig+CoreDataClass.swift */,
-				A0FAAEA12221999A00C36B27 /* ServerConfig+CoreDataProperties.swift */,
-				A0FAAEA22221999A00C36B27 /* AppConfig+CoreDataClass.swift */,
-				A0FAAEA32221999A00C36B27 /* AppConfig+CoreDataProperties.swift */,
+				A057D49D22AC4038005A5398 /* ServerConfig+CoreDataClass.swift */,
+				A057D49E22AC4038005A5398 /* ServerConfig+CoreDataProperties.swift */,
+				A057D49F22AC4038005A5398 /* AppConfig+CoreDataClass.swift */,
+				A057D4A022AC4038005A5398 /* AppConfig+CoreDataProperties.swift */,
 				A0FAAE7D221F4C5800C36B27 /* Screenshot-upload-tool.xcdatamodeld */,
 				A0FAAE73221F26EF00C36B27 /* PersistenceService.swift */,
 			);
@@ -220,18 +220,18 @@
 			files = (
 				A0065443221ADEEF00F9E2F7 /* UploadAPI.swift in Sources */,
 				A0065449221AF22400F9E2F7 /* Config.swift in Sources */,
+				A057D4A322AC4038005A5398 /* AppConfig+CoreDataClass.swift in Sources */,
 				A006544D221AF58900F9E2F7 /* ImageObserver.swift in Sources */,
-				A0FAAEA62221999A00C36B27 /* AppConfig+CoreDataClass.swift in Sources */,
 				A063609A221CAC96002DA7C3 /* Screencapture.swift in Sources */,
+				A057D4A222AC4038005A5398 /* ServerConfig+CoreDataProperties.swift in Sources */,
 				A0FAAE9C221F57A500C36B27 /* PreferencesWindow.swift in Sources */,
 				A0065441221ADADF00F9E2F7 /* StatusMenuController.swift in Sources */,
-				A0FAAEA52221999A00C36B27 /* ServerConfig+CoreDataProperties.swift in Sources */,
 				A0FAAE74221F26EF00C36B27 /* PersistenceService.swift in Sources */,
-				A0FAAEA72221999A00C36B27 /* AppConfig+CoreDataProperties.swift in Sources */,
+				A057D4A122AC4038005A5398 /* ServerConfig+CoreDataClass.swift in Sources */,
 				A0FAAE7F221F4C5800C36B27 /* Screenshot-upload-tool.xcdatamodeld in Sources */,
-				A0FAAEA42221999A00C36B27 /* ServerConfig+CoreDataClass.swift in Sources */,
 				A0FAAED52223F72F00C36B27 /* View.swift in Sources */,
 				A0065433221AD45300F9E2F7 /* AppDelegate.swift in Sources */,
+				A057D4A422AC4038005A5398 /* AppConfig+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +368,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TP64CY2NRD;
@@ -376,8 +377,10 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "jonassen.andreas.apps.Screenshot-upload-tool";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -386,6 +389,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = TP64CY2NRD;
@@ -394,8 +398,10 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "jonassen.andreas.apps.Screenshot-upload-tool";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
