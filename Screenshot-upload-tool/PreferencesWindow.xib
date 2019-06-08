@@ -44,11 +44,11 @@
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
                             <tabViewItem label="Settings" identifier="" id="T0Z-d3-BQv">
-                                <view key="view" ambiguous="YES" id="zB1-41-tfd">
+                                <view key="view" id="zB1-41-tfd">
                                     <rect key="frame" x="10" y="33" width="537" height="336"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textField identifier="saveFolderInput" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j6w-WG-9cd">
+                                        <textField identifier="saveFolderInput" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j6w-WG-9cd" customClass="Editing" customModule="Screenshot_upload_tool" customModuleProvider="target">
                                             <rect key="frame" x="156" y="214" width="223" height="22"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="8dh-7V-97x">
@@ -167,11 +167,11 @@
                                 </view>
                             </tabViewItem>
                             <tabViewItem label="Server Configurations" identifier="" id="e72-Cf-gEY">
-                                <view key="view" id="C2P-pE-fZb">
+                                <view key="view" ambiguous="YES" id="C2P-pE-fZb">
                                     <rect key="frame" x="10" y="33" width="537" height="336"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2TB-cU-h09">
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2TB-cU-h09" customClass="Editing" customModule="Screenshot_upload_tool" customModuleProvider="target">
                                             <rect key="frame" x="16" y="287" width="240" height="22"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="vZO-Xf-MR7">
@@ -180,7 +180,7 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField identifier="requestURLInput" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vjZ-3V-A6A">
+                                        <textField identifier="requestURLInput" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vjZ-3V-A6A" customClass="Editing" customModule="Screenshot_upload_tool" customModuleProvider="target">
                                             <rect key="frame" x="279" y="287" width="240" height="22"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="dmp-Oa-15l">
@@ -192,7 +192,7 @@
                                                 <outlet property="delegate" destination="-2" id="wsp-ew-jdh"/>
                                             </connections>
                                         </textField>
-                                        <textField identifier="fileFormNameInput" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bcc-1a-iiw">
+                                        <textField identifier="fileFormNameInput" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bcc-1a-iiw" customClass="Editing" customModule="Screenshot_upload_tool" customModuleProvider="target">
                                             <rect key="frame" x="279" y="232" width="240" height="22"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="5y8-Ev-ObW">
@@ -204,7 +204,7 @@
                                                 <outlet property="delegate" destination="-2" id="ZHT-OH-dIK"/>
                                             </connections>
                                         </textField>
-                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tJ5-Kd-MNN">
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tJ5-Kd-MNN" customClass="Editing" customModule="Screenshot_upload_tool" customModuleProvider="target">
                                             <rect key="frame" x="279" y="176" width="101" height="22"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="7lc-3U-b7K">
@@ -213,7 +213,7 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ikD-Ot-iqa">
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ikD-Ot-iqa" customClass="Editing" customModule="Screenshot_upload_tool" customModuleProvider="target">
                                             <rect key="frame" x="418" y="176" width="101" height="22"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="Ss5-Wh-2gY">

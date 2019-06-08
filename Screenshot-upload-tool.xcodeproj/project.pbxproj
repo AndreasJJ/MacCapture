@@ -20,6 +20,7 @@
 		A057D4A322AC4038005A5398 /* AppConfig+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A057D49F22AC4038005A5398 /* AppConfig+CoreDataClass.swift */; };
 		A057D4A422AC4038005A5398 /* AppConfig+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A057D4A022AC4038005A5398 /* AppConfig+CoreDataProperties.swift */; };
 		A063609A221CAC96002DA7C3 /* Screencapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0636099221CAC96002DA7C3 /* Screencapture.swift */; };
+		A0A956EA22AC45CA0091E6A1 /* Editing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A956E922AC45CA0091E6A1 /* Editing.swift */; };
 		A0FAAE55221F257300C36B27 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0FAAE54221F257300C36B27 /* CoreData.framework */; };
 		A0FAAE74221F26EF00C36B27 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FAAE73221F26EF00C36B27 /* PersistenceService.swift */; };
 		A0FAAE7F221F4C5800C36B27 /* Screenshot-upload-tool.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0FAAE7D221F4C5800C36B27 /* Screenshot-upload-tool.xcdatamodeld */; };
@@ -45,6 +46,7 @@
 		A057D49F22AC4038005A5398 /* AppConfig+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A057D4A022AC4038005A5398 /* AppConfig+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A0636099221CAC96002DA7C3 /* Screencapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screencapture.swift; sourceTree = "<group>"; };
+		A0A956E922AC45CA0091E6A1 /* Editing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editing.swift; sourceTree = "<group>"; };
 		A0FAAE54221F257300C36B27 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		A0FAAE73221F26EF00C36B27 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		A0FAAE7E221F4C5800C36B27 /* Screenshot-upload-tool.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Screenshot-upload-tool.xcdatamodel"; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				A0065439221AD45300F9E2F7 /* Info.plist */,
 				A0065434221AD45300F9E2F7 /* Assets.xcassets */,
 				A0FAAED42223F72F00C36B27 /* View.swift */,
+				A0A956E922AC45CA0091E6A1 /* Editing.swift */,
 			);
 			path = "Screenshot-upload-tool";
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0A956EA22AC45CA0091E6A1 /* Editing.swift in Sources */,
 				A0065443221ADEEF00F9E2F7 /* UploadAPI.swift in Sources */,
 				A0065449221AF22400F9E2F7 /* Config.swift in Sources */,
 				A057D4A322AC4038005A5398 /* AppConfig+CoreDataClass.swift in Sources */,
